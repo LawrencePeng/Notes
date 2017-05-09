@@ -1,0 +1,4 @@
+- K和V都有Strong、Weak、Soft，也导致出现了很多逻辑，中间很多冗余的代码为了减少内存消耗而复制粘贴多次。
+- 采用了分段锁的实现，每个Segment是无锁读+有锁写。Hash Func 是Wang/Jenkin Hash。
+- 后台定时刷新数据,支持同步和异步的load、get等，真是良心。
+- WeakHashMap的并发安全版
